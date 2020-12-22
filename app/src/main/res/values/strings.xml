@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SemiFinalPRoject</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_about">About Us</string>
+
+    <string name="menu_courses">Courses</string>
+    <string name="menu_notes">Notes</string>
+    <string name="developed_by_ali_mansour">Developed By Ali Mansour</string>
+    <string name="about_us">About Us</string>
+    <string name="new_course">New Course</string>
+    <string name="new_note">New Note</string>
+    <string name="course_name">Course Name</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="note_title">Note Title</string>
+    <string name="content">Content</string>
+    <string name="no_notes_alert">There is no notes! Add the first one.</string>
+    <string name="no_courses_alert">There is no courses! Add the first one.</string>
+</resources>

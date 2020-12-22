@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_courses">
+
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="dev.alimansour.semifinalproject.ui.courses.CoursesFragment"
+        android:label="@string/menu_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_nav_courses_to_nav_notes"
+            app:destination="@id/nav_notes" />
+        <action
+            android:id="@+id/action_nav_courses_to_addEditCourseFragment"
+            app:destination="@id/addEditCourseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="dev.alimansour.semifinalproject.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_nav_notes_to_addEditNoteFragment"
+            app:destination="@id/addEditNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditCourseFragment"
+        android:name="dev.alimansour.semifinalproject.ui.courses.AddEditCourseFragment"
+        android:label="AddEditCourseFragment"
+        tools:layout="@layout/fragment_add_edit_course">
+        <action
+            android:id="@+id/action_addEditCourseFragment_to_nav_courses"
+            app:destination="@id/nav_courses" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditNoteFragment"
+        android:name="dev.alimansour.semifinalproject.ui.notes.AddEditNoteFragment"
+        android:label="AddEditNoteFragment"
+        tools:layout="@layout/fragment_add_edit_note">
+        <action
+            android:id="@+id/action_addEditNoteFragment_to_nav_notes"
+            app:destination="@id/nav_notes" />
+    </fragment>
+
+</navigation>
