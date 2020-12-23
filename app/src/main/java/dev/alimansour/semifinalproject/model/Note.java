@@ -1,5 +1,8 @@
 package dev.alimansour.semifinalproject.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour
  * Copyright © 2020 Ali Mansour. All Rights Reserved.
@@ -7,12 +10,24 @@ package dev.alimansour.semifinalproject.model;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
+@Entity(tableName = "notes")
 public class Note {
+    @PrimaryKey(autoGenerate = true)
     private int id;
+    private int courseId;
     private String title;
     private String content;
 
-    public Note(String title, String content) {
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
+    public Note(int courseId, String title, String content) {
+        this.courseId = courseId;
         this.title = title;
         this.content = content;
     }

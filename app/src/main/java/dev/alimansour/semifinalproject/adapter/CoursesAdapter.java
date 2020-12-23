@@ -27,8 +27,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
     public CoursesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         CoursesListItemBinding binding = CoursesListItemBinding.inflate(inflater, parent, false);
-        CoursesViewHolder viewHolder = new CoursesViewHolder(binding);
-        return viewHolder;
+        return new CoursesViewHolder(binding);
     }
 
     @Override
@@ -44,9 +43,10 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
 
     public void setDataSource(List<Course> courses) {
         this.courses = courses;
+        notifyDataSetChanged();
     }
 
-    public void setClickListener(CourseClickListener listener) {
+    public void setListener(CourseClickListener listener) {
         this.listener = listener;
     }
 
@@ -62,7 +62,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
             binding.nameTextView.setText(course.getName());
             binding.descriptionTextView.setText(course.getDescription());
             binding.getRoot().setOnClickListener(v -> listener.onClick(course.getId()));
-            binding.updateButton.setOnClickListener(v -> listener.onUpdate(course));
+            binding.updateButton.setOnClickListener(v -> listener.onUpdate(course.getId()));
             binding.deleteButton.setOnClickListener(v -> listener.onDelete(course));
         }
     }

@@ -39,7 +39,7 @@
         tools:listitem="@layout/notes_list_item" />
 
     <TextView
-        android:id="@+id/noCoursesTextView"
+        android:id="@+id/noNotesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

@@ -1,6 +1,6 @@
 package dev.alimansour.semifinalproject.ui;
 
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.model.Note;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour
@@ -9,11 +9,8 @@ import dev.alimansour.semifinalproject.model.Course;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public interface CourseClickListener {
+public interface NoteClickListener {
+    public void onUpdate(int Id);
 
-    public void onClick(int id);
-
-    public void onUpdate(int id);
-
-    public void onDelete(Course course);
+    public void onDelete(Note note);
 }

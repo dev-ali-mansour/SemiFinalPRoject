@@ -12,21 +12,26 @@
         android:id="@+id/coursesSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:background="@color/white" />
 
     <EditText
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:hint="@string/note_title" />
+        android:background="@color/white"
+        android:hint="@string/note_title"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:hint="@string/content" />
+        android:background="@color/white"
+        android:hint="@string/content"
+        android:textSize="25sp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/saveNoteCardView"
@@ -37,6 +42,7 @@
         app:cardCornerRadius="8dp">
 
         <TextView
+            android:id="@+id/saveNoteTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/color_dark_blue"
