@@ -11,7 +11,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour

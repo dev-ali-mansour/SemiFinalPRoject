@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.adapter.NotesAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentNotesBinding;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Note;
 import dev.alimansour.semifinalproject.ui.NoteClickListener;
 
 public class NotesFragment extends Fragment implements NoteClickListener {

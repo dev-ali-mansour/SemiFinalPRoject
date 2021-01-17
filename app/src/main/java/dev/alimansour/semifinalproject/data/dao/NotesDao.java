@@ -7,7 +7,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Note;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour

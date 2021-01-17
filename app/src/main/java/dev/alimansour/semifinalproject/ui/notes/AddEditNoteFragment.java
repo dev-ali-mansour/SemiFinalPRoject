@@ -10,14 +10,16 @@ import android.widget.Toast;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.adapter.CoursesSpinnerAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentAddEditNoteBinding;
-import dev.alimansour.semifinalproject.model.Course;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Note;
+import dev.alimansour.semifinalproject.ui.MainActivity;
 import dev.alimansour.semifinalproject.ui.courses.CoursesViewModel;
 import dev.alimansour.semifinalproject.ui.courses.CoursesViewModelFactory;
 
@@ -33,6 +35,7 @@ public class AddEditNoteFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        ActionBar actionBar = ((MainActivity) requireActivity()).getSupportActionBar();
         binding = FragmentAddEditNoteBinding.inflate(inflater, container, false);
         coursesViewModel = new ViewModelProvider(this,
                 new CoursesViewModelFactory(requireActivity().getApplication()))
@@ -48,10 +51,10 @@ public class AddEditNoteFragment extends Fragment {
             id = requireArguments().getInt(getString(R.string.note_id), 0);
             isEdit = requireArguments().getBoolean(getString(R.string.is_edit), false);
         }
-        requireActivity().setTitle(getString(R.string.new_note));
+        actionBar.setTitle(R.string.new_note);
 
         if (isEdit && id > 0) {
-            requireActivity().setTitle(getString(R.string.update_note));
+            actionBar.setTitle(getString(R.string.update_note));
             loadCurrentNote(id);
         }
 

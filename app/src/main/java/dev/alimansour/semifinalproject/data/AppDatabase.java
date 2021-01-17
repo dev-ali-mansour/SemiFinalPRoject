@@ -7,8 +7,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import dev.alimansour.semifinalproject.data.dao.CoursesDao;
 import dev.alimansour.semifinalproject.data.dao.NotesDao;
-import dev.alimansour.semifinalproject.model.Course;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Note;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour

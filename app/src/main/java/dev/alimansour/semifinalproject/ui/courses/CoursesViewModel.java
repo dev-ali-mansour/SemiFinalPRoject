@@ -10,7 +10,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import dev.alimansour.semifinalproject.data.AppDatabase;
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 
 public class CoursesViewModel extends AndroidViewModel {
     private static AppDatabase database;

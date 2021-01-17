@@ -8,7 +8,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import dev.alimansour.semifinalproject.databinding.NotesListItemBinding;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Note;
 import dev.alimansour.semifinalproject.ui.NoteClickListener;
 
 /**

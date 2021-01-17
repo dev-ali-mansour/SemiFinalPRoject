@@ -10,7 +10,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import dev.alimansour.semifinalproject.data.AppDatabase;
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Note;
 
 public class NotesViewModel extends AndroidViewModel {
     private static AppDatabase database;

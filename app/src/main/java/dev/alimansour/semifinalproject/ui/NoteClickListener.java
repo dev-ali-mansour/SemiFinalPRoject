@@ -1,6 +1,6 @@
 package dev.alimansour.semifinalproject.ui;
 
-import dev.alimansour.semifinalproject.model.Note;
+import dev.alimansour.semifinalproject.domain.model.Note;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour

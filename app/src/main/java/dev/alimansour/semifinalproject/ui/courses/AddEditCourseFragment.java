@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.databinding.FragmentAddEditCourseBinding;
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 
 public class AddEditCourseFragment extends Fragment {
     private FragmentAddEditCourseBinding binding;

@@ -8,7 +8,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import dev.alimansour.semifinalproject.databinding.CoursesListItemBinding;
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 import dev.alimansour.semifinalproject.ui.CourseClickListener;
 
 /**

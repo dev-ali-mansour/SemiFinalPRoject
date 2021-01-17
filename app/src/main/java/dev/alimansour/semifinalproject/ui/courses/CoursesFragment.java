@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.adapter.CoursesAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentCoursesBinding;
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 import dev.alimansour.semifinalproject.ui.CourseClickListener;
 
 public class CoursesFragment extends Fragment implements CourseClickListener {

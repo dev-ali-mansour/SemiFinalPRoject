@@ -1,6 +1,6 @@
 package dev.alimansour.semifinalproject.ui;
 
-import dev.alimansour.semifinalproject.model.Course;
+import dev.alimansour.semifinalproject.domain.model.Course;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour
