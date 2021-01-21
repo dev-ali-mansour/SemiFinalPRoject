@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui.courses;
+package dev.alimansour.semifinalproject.presentation.courses;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +19,7 @@ import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.adapter.CoursesAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentCoursesBinding;
 import dev.alimansour.semifinalproject.domain.model.Course;
-import dev.alimansour.semifinalproject.ui.CourseClickListener;
+import dev.alimansour.semifinalproject.presentation.CourseClickListener;
 
 public class CoursesFragment extends Fragment implements CourseClickListener {
     private FragmentCoursesBinding binding;
@@ -29,9 +29,7 @@ public class CoursesFragment extends Fragment implements CourseClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentCoursesBinding.inflate(inflater, container, false);
-        coursesViewModel = new ViewModelProvider(this,
-                new CoursesViewModelFactory(requireActivity().getApplication()))
-                .get(CoursesViewModel.class);
+        coursesViewModel = new ViewModelProvider(this).get(CoursesViewModel.class);
         requireActivity().setTitle(getString(R.string.all_courses));
         loadCourses();
 

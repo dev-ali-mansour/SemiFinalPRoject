@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui.courses;
+package dev.alimansour.semifinalproject.presentation.courses;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,9 +33,7 @@ public class AddEditCourseFragment extends Fragment {
         binding = FragmentAddEditCourseBinding.inflate(inflater, container, false);
         try {
             coursesViewModel =
-                    new ViewModelProvider(this,
-                            new CoursesViewModelFactory(requireActivity().getApplication()))
-                            .get(CoursesViewModel.class);
+                    new ViewModelProvider(this).get(CoursesViewModel.class);
 
             if (getArguments() != null) {
                 id = requireArguments().getInt(getString(R.string.course_id), 0);

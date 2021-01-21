@@ -12,14 +12,14 @@ import dev.alimansour.semifinalproject.domain.repository.NotesRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class GetAllNotesUseCase {
-    private NotesRepository repository;
+public class GetAllNotesUseCase extends BaseUseCase {
 
     public GetAllNotesUseCase(NotesRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
-    List<Note> execute() {
+    @Override
+    public List<Note> execute() {
         return repository.getAllNotes();
     }
 }

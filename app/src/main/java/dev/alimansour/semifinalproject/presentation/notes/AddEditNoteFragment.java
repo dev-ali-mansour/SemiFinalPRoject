@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui.notes;
+package dev.alimansour.semifinalproject.presentation.notes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,9 +19,8 @@ import dev.alimansour.semifinalproject.adapter.CoursesSpinnerAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentAddEditNoteBinding;
 import dev.alimansour.semifinalproject.domain.model.Course;
 import dev.alimansour.semifinalproject.domain.model.Note;
-import dev.alimansour.semifinalproject.ui.MainActivity;
-import dev.alimansour.semifinalproject.ui.courses.CoursesViewModel;
-import dev.alimansour.semifinalproject.ui.courses.CoursesViewModelFactory;
+import dev.alimansour.semifinalproject.presentation.MainActivity;
+import dev.alimansour.semifinalproject.presentation.courses.CoursesViewModel;
 
 public class AddEditNoteFragment extends Fragment {
     private FragmentAddEditNoteBinding binding;
@@ -37,13 +36,9 @@ public class AddEditNoteFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         ActionBar actionBar = ((MainActivity) requireActivity()).getSupportActionBar();
         binding = FragmentAddEditNoteBinding.inflate(inflater, container, false);
-        coursesViewModel = new ViewModelProvider(this,
-                new CoursesViewModelFactory(requireActivity().getApplication()))
-                .get(CoursesViewModel.class);
+        coursesViewModel = new ViewModelProvider(this).get(CoursesViewModel.class);
         notesViewModel =
-                new ViewModelProvider(this,
-                        new NotesViewModelFactory(requireActivity().getApplication()))
-                        .get(NotesViewModel.class);
+                new ViewModelProvider(this).get(NotesViewModel.class);
 
         loadCourses();
 

@@ -10,14 +10,14 @@ import dev.alimansour.semifinalproject.domain.repository.NotesRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class FindNoteUseCase {
-    private NotesRepository repository;
+public class FindNoteUseCase extends BaseUseCase {
 
     public FindNoteUseCase(NotesRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
-    Note execute(int id) {
+    @Override
+    public Note execute(int id) {
         return repository.findById(id);
     }
 }

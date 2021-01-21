@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SemiFinalPRoject">
-        <activity android:name=".ui.AboutActivity"></activity>
+        <activity android:name=".presentation.AboutActivity"></activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".presentation.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.SemiFinalPRoject.NoActionBar" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".presentation.SplashActivity"
             android:theme="@style/Theme.SemiFinalPRoject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -10,14 +10,13 @@ import dev.alimansour.semifinalproject.domain.repository.CourseRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class UpdateCourseUseCase {
-    private CourseRepository repository;
-
+public class UpdateCourseUseCase extends BaseUseCase{
     public UpdateCourseUseCase(CourseRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
-    Boolean execute(Course course) {
+    @Override
+    public Boolean execute(Course course) {
         return repository.updateCourse(course);
     }
 }

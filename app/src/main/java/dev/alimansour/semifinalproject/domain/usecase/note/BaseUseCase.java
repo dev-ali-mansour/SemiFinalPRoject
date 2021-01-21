@@ -1,5 +1,7 @@
 package dev.alimansour.semifinalproject.domain.usecase.note;
 
+import java.util.List;
+
 import dev.alimansour.semifinalproject.domain.model.Note;
 import dev.alimansour.semifinalproject.domain.repository.NotesRepository;
 
@@ -10,13 +12,26 @@ import dev.alimansour.semifinalproject.domain.repository.NotesRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class UpdateNoteUseCase extends BaseUseCase {
-    public UpdateNoteUseCase(NotesRepository repository) {
-        super(repository);
+public class BaseUseCase {
+    protected final NotesRepository repository;
+
+    public BaseUseCase(NotesRepository repository) {
+        this.repository = repository;
     }
 
-    @Override
     public Boolean execute(Note note) {
-        return repository.updateNote(note);
+        return false;
+    }
+
+    public Note execute(int id) {
+        return null;
+    }
+
+    public List<Note> execute() {
+        return null;
+    }
+
+    public List<Note> execute2(int id) {
+        return null;
     }
 }

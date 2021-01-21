@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_courses"
-        android:name="dev.alimansour.semifinalproject.ui.courses.CoursesFragment"
+        android:name="dev.alimansour.semifinalproject.presentation.courses.CoursesFragment"
         android:label="@string/menu_courses"
         tools:layout="@layout/fragment_courses" >
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/nav_notes"
-        android:name="dev.alimansour.semifinalproject.ui.notes.NotesFragment"
+        android:name="dev.alimansour.semifinalproject.presentation.notes.NotesFragment"
         android:label="@string/menu_notes"
         tools:layout="@layout/fragment_notes" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/addEditCourseFragment"
-        android:name="dev.alimansour.semifinalproject.ui.courses.AddEditCourseFragment"
+        android:name="dev.alimansour.semifinalproject.presentation.courses.AddEditCourseFragment"
         android:label="AddEditCourseFragment"
         tools:layout="@layout/fragment_add_edit_course">
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/addEditNoteFragment"
-        android:name="dev.alimansour.semifinalproject.ui.notes.AddEditNoteFragment"
+        android:name="dev.alimansour.semifinalproject.presentation.notes.AddEditNoteFragment"
         android:label="AddEditNoteFragment"
         tools:layout="@layout/fragment_add_edit_note">
         <action

@@ -12,13 +12,22 @@ import dev.alimansour.semifinalproject.domain.repository.CourseRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class GetAllCoursesUseCase extends BaseUseCase{
-    public GetAllCoursesUseCase(CourseRepository repository) {
-        super(repository);
+public class BaseUseCase {
+    protected final CourseRepository repository;
+
+    public BaseUseCase(CourseRepository repository) {
+        this.repository = repository;
     }
 
-    @Override
+    public Boolean execute(Course course) {
+        return false;
+    }
+
+    public Course execute(int id) {
+        return null;
+    }
+
     public List<Course> execute() {
-        return repository.getAllCourses();
+        return null;
     }
 }

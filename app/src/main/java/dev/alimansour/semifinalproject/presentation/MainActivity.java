@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui;
+package dev.alimansour.semifinalproject.presentation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.appBarMain.toolbar);
+
+        ApplicationProvider provider = ApplicationProvider.getInstance();
+        provider.setApp(getApplication());
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

@@ -10,14 +10,14 @@ import dev.alimansour.semifinalproject.domain.repository.CourseRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class FindCourseUseCase {
-    private CourseRepository repository;
+public class FindCourseUseCase extends BaseUseCase {
 
     public FindCourseUseCase(CourseRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
-    Course execute(int id) {
+    @Override
+    public Course execute(int id) {
         return repository.findById(id);
     }
 }

@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui.notes;
+package dev.alimansour.semifinalproject.presentation.notes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +19,7 @@ import dev.alimansour.semifinalproject.R;
 import dev.alimansour.semifinalproject.adapter.NotesAdapter;
 import dev.alimansour.semifinalproject.databinding.FragmentNotesBinding;
 import dev.alimansour.semifinalproject.domain.model.Note;
-import dev.alimansour.semifinalproject.ui.NoteClickListener;
+import dev.alimansour.semifinalproject.presentation.NoteClickListener;
 
 public class NotesFragment extends Fragment implements NoteClickListener {
     private FragmentNotesBinding binding;
@@ -31,9 +31,7 @@ public class NotesFragment extends Fragment implements NoteClickListener {
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentNotesBinding.inflate(inflater, container, false);
         notesViewModel =
-                new ViewModelProvider(this,
-                        new NotesViewModelFactory(requireActivity().getApplication()))
-                        .get(NotesViewModel.class);
+                new ViewModelProvider(this).get(NotesViewModel.class);
         if (getArguments() != null) {
             courseId = requireArguments().getInt(getString(R.string.course_id), 0);
             requireActivity().setTitle(getString(R.string.course_notes));

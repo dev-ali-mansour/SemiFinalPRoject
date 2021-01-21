@@ -10,14 +10,14 @@ import dev.alimansour.semifinalproject.domain.repository.NotesRepository;
  * ----------------- SemiFinalPRoject IS FREE SOFTWARE ------------------
  * https://www.alimansour.dev   |   dev.ali.mansour@gmail.com
  */
-public class AddNoteUseCase {
-    private NotesRepository repository;
+public class AddNoteUseCase  extends BaseUseCase{
 
     public AddNoteUseCase(NotesRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
-    Boolean execute(Note note) {
+    @Override
+    public Boolean execute(Note note) {
         return repository.addNote(note);
     }
 }

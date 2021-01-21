@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import dev.alimansour.semifinalproject.databinding.NotesListItemBinding;
 import dev.alimansour.semifinalproject.domain.model.Note;
-import dev.alimansour.semifinalproject.ui.NoteClickListener;
+import dev.alimansour.semifinalproject.presentation.NoteClickListener;
 
 /**
  * SemiFinalPRoject Android Application developed by: Ali Mansour

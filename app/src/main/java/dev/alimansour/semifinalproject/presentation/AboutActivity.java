@@ -1,4 +1,4 @@
-package dev.alimansour.semifinalproject.ui;
+package dev.alimansour.semifinalproject.presentation;
 
 import android.os.Bundle;
 
